@@ -1,0 +1,17 @@
+# Neovim
+plugin/
+.netrw*
+lazy-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.swp
+*.swo
+*~
+.*.sw?
+
+# Log files
+*.log
