@@ -1,0 +1,10 @@
+# Neovim data directory (lazy.nvim downloads)
+lazy-lock.json
+
+# macOS
+.DS_Store
+
+# Vim swap files
+*.swp
+*.swo
+*~
