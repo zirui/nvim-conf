@@ -25,4 +25,14 @@ return {
   -- 		},
   -- 	},
   -- },
+
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = function(_, opts)
+      local custom = require("configs.nvim-tree")
+      return vim.tbl_deep_extend("force", opts, custom)
+    end,
+  },
+
 }
+

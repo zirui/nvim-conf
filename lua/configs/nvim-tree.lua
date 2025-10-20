@@ -1,14 +1,20 @@
-local status_ok, nvim_tree = pcall(require, "nvim-tree")
-if not status_ok then
-  return
-end
-
-nvim_tree.setup({
+-- Return a table, not call setup()
+local options = {
   view = {
-    width = 80,   -- 设置默认宽度为 40
+    width = function()
+      -- dynamically 35% of window width
+      return math.floor(vim.o.columns * 0.25)
+    end,
     side = "left",
     preserve_window_proportions = true,
   },
-  -- 你可以添加其他 nvim-tree 配置
-})
+  renderer = {
+    highlight_git = true,
+    highlight_opened_files = "name",
+  },
+  sync_root_with_cwd = true,
+  respect_buf_cwd = true,
+}
+
+return options
 
