@@ -13,7 +13,7 @@ return {
 		views = {
       cmdline_popup = {
         position = {
-          row = "10%",  -- 这里才会生效
+          row = "25%",  -- 这里才会生效
           col = "50%",
         },
         size = {
